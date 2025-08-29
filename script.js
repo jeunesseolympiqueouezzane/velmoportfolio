@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Portfolio Project Data with actual image filenames
 const projectImages = {
+    'websites-developed': [], // No images, just links
     'luna-memecoin': [
         'WhatsApp Image 2025-08-21 à 05.39.01_186f7215.jpg',
         'WhatsApp Image 2025-08-21 à 05.39.01_30646f1e.jpg',
@@ -122,6 +123,26 @@ const projectImages = {
 
 // Portfolio Project Data
 const projectData = {
+    'websites-developed': {
+        title: 'Websites Developed',
+        items: [
+            {
+                name: 'Meobet',
+                url: 'http://www.meobet.xyz',
+                description: 'Crypto Betting Platform'
+            },
+            {
+                name: 'Meowbet',
+                url: 'https://meowbet.vercel.app/',
+                description: 'Web3 Casino Platform'
+            },
+            {
+                name: 'ByenanceCZ',
+                url: 'https://www.byenancecz.xyz/',
+                description: 'Crypto Exchange Landing Page'
+            }
+        ]
+    },
     'luna-memecoin': {
         title: 'Luna Memecoin Collection',
         items: []
@@ -180,18 +201,36 @@ function initializePortfolio() {
         // Update title
         projectTitle.textContent = project.title;
 
-        // Generate gallery items - only show items that have actual images
-        galleryGrid.innerHTML = '';
-        const projectImageList = projectImages[projectId];
-        
-        if (projectImageList && projectImageList.length > 0) {
-            projectImageList.forEach((imageName, index) => {
-                const galleryItem = createImageGalleryItem(imageName, index, projectId);
-                galleryGrid.appendChild(galleryItem);
+
+        // Special handling for websites-developed
+        if (projectId === 'websites-developed') {
+            galleryGrid.innerHTML = '';
+            const websites = projectData['websites-developed'].items;
+            websites.forEach(site => {
+                const div = document.createElement('div');
+                div.className = 'gallery-item';
+                div.innerHTML = `
+                    <div class="website-example">
+                        <h4 style="margin-bottom: 0.5rem;">${site.name}</h4>
+                        <a href="${site.url}" target="_blank" style="color:#3b82f6;word-break:break-all;">${site.url}</a>
+                        <p style="color:#94a3b8; margin-top:0.5rem;">${site.description}</p>
+                    </div>
+                `;
+                galleryGrid.appendChild(div);
             });
         } else {
-            // Fallback: show placeholder message if no images
-            galleryGrid.innerHTML = '<p style="color: #94a3b8; text-align: center; grid-column: 1 / -1;">No images available for this project yet.</p>';
+            // Generate gallery items - only show items that have actual images
+            galleryGrid.innerHTML = '';
+            const projectImageList = projectImages[projectId];
+            if (projectImageList && projectImageList.length > 0) {
+                projectImageList.forEach((imageName, index) => {
+                    const galleryItem = createImageGalleryItem(imageName, index, projectId);
+                    galleryGrid.appendChild(galleryItem);
+                });
+            } else {
+                // Fallback: show placeholder message if no images
+                galleryGrid.innerHTML = '<p style="color: #94a3b8; text-align: center; grid-column: 1 / -1;">No images available for this project yet.</p>';
+            }
         }
 
         // Scroll to gallery
@@ -209,7 +248,8 @@ function initializePortfolio() {
         div.className = 'gallery-item';
         div.style.animationDelay = `${index * 0.1}s`;
         
-        // Handle folder names with spaces
+
+        // Handle folder names with spaces and special characters (encodeURIComponent for each folder segment)
         let folderName = projectId;
         if (projectId === 'luna-memecoin') folderName = 'luna memecoin';
         if (projectId === 'hypnotic-chameleons') folderName = 'hypnotic chameleons';
@@ -217,9 +257,12 @@ function initializePortfolio() {
         if (projectId === 'sugarcane-memecoin') folderName = 'sugarcane memecoin';
         if (projectId === 'tilly-memecoin') folderName = 'tilly memecoin';
         if (projectId === 'random-arts') folderName = 'random nfts + memecoins arts';
-        
-        const imagePath = `img/${folderName}/${imageName}`;
-        
+
+        // Encode each folder segment for spaces and special chars
+        const encodedFolder = folderName.split(' ').map(encodeURIComponent).join('%20');
+        const encodedImage = encodeURIComponent(imageName);
+        const imagePath = `img/${encodedFolder}/${encodedImage}`;
+
         div.innerHTML = `
             <div class="gallery-image">
                 <img src="${imagePath}" alt="Project Image ${index + 1}" class="gallery-img" 
