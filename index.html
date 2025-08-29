@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velmoverse | Art & Dev Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="img/logo + banner/logo.jpg" alt="Velmoverse Logo" class="logo-image">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" style="background: linear-gradient(rgba(15, 20, 25, 0.7), rgba(15, 20, 25, 0.7)), url('img/logo + banner/Banner.jpg') center/cover;">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Velmoverse</span>
+                </h1>
+                <p class="hero-subtitle">Art & Development for Web3, NFTs, Memecoins, and Blockchain Projects</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="floating-card card-1">
+                        <i class="fab fa-ethereum"></i>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fab fa-bitcoin"></i>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Velmoverse</h2>
+                <p class="section-subtitle">Art & Development studio for Web3, NFTs, memecoins, and blockchain innovation</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>We are Velmoverse, a creative studio specializing in both art and development for Web3, NFTs, memecoins, and blockchain projects. Our team delivers custom NFT collections, branding, project logos, full-stack development, and complete visual identities for crypto startups and established blockchain companies.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>100+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>3+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <img src="img/logo + banner/logo.jpg" alt="Velmoverse Logo" class="about-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Project Portfolio</h2>
+                <p class="section-subtitle">Browse my work organized by client projects</p>
+            </div>
+            
+            <!-- Project Folders -->
+            <div class="portfolio-folders" id="portfolio-folders">
+                <div class="project-folder" data-project="luna-memecoin">
+                    <div class="folder-icon">
+                        <i class="fas fa-folder"></i>
+                        <span class="folder-count">9</span>
+                    </div>
+                    <h3>Luna Memecoin</h3>
+                    <p>NFT Collection Design</p>
+                    <div class="project-tags">
+                        <span class="tag">NFT</span>
+                        <span class="tag">Collection</span>
+                    </div>
+                </div>
+                
+                <div class="project-folder" data-project="hypnotic-chameleons">
+                    <div class="folder-icon">
+                        <i class="fas fa-folder"></i>
+                        <span class="folder-count">7</span>
+                    </div>
+                    <h3>Hypnotic Chameleons</h3>
+                    <p>NFT Collection</p>
+                    <div class="project-tags">
+                        <span class="tag">NFT</span>
+                        <span class="tag">Branding</span>
+                    </div>
+                </div>
+                
+                <div class="project-folder" data-project="trumpio-ladio">
+                    <div class="folder-icon">
+                        <i class="fas fa-folder"></i>
+                        <span class="folder-count">11</span>
+                    </div>
+                    <h3>Trumpio Ladio</h3>
+                    <p>Memecoin Branding</p>
+                    <div class="project-tags">
+                        <span class="tag">Memecoin</span>
+                        <span class="tag">Branding</span>
+                    </div>
+                </div>
+                
+                <div class="project-folder" data-project="sugarcane-memecoin">
+                    <div class="folder-icon">
+                        <i class="fas fa-folder"></i>
+                        <span class="folder-count">12</span>
+                    </div>
+                    <h3>SugarCane Memecoin</h3>
+                    <p>Memecoin Design</p>
+                    <div class="project-tags">
+                        <span class="tag">Memecoin</span>
+                        <span class="tag">Design</span>
+                    </div>
+                </div>
+                
+                <div class="project-folder" data-project="tilly-memecoin">
+                    <div class="folder-icon">
+                        <i class="fas fa-folder"></i>
+                        <span class="folder-count">14</span>
+                    </div>
+                    <h3>Tilly Memecoin</h3>
+                    <p>Memecoin Branding</p>
+                    <div class="project-tags">
+                        <span class="tag">Memecoin</span>
+                        <span class="tag">Branding</span>
+                    </div>
+                </div>
+                
+                <div class="project-folder" data-project="random-arts">
+                    <div class="folder-icon">
+                        <i class="fas fa-folder"></i>
+                        <span class="folder-count">30</span>
+                    </div>
+                    <h3>Random NFTs + Memecoins</h3>
+                    <p>Mixed Artwork Collection</p>
+                    <div class="project-tags">
+                        <span class="tag">Mixed</span>
+                        <span class="tag">Collection</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Gallery (Hidden by default) -->
+            <div class="project-gallery" id="project-gallery" style="display: none;">
+                <div class="gallery-header">
+                    <button class="back-btn" id="back-btn">
+                        <i class="fas fa-arrow-left"></i> Back to Projects
+                    </button>
+                    <h3 id="project-title">Project Title</h3>
+                </div>
+                
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Gallery items will be loaded here dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Art & Development for Web3, NFTs, memecoins, and blockchain projects</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>NFT & Art Collections</h3>
+                    <p>Custom NFT collections, illustrations, and digital art for Web3 and blockchain projects.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Memecoin Branding</h3>
+                    <p>Logo design, mascots, and full branding for memecoins and crypto projects.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web3 & Blockchain Development</h3>
+                    <p>Smart contracts, dApps, NFT minting sites, and full-stack blockchain development.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Graphic & UI/UX Design</h3>
+                    <p>Modern interfaces, custom graphics, and user experiences for DeFi, NFT, and crypto apps.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Brand Identity</h3>
+                    <p>Complete branding packages for DAOs, DeFi protocols, and blockchain startups.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3>Social Media & Marketing Assets</h3>
+                    <p>Twitter headers, Discord banners, promotional graphics, and marketing materials.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's collaborate on your next Web3 project. Available for freelance work and custom commissions.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:artbyvelmo@gmail.com">artbyvelmo@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-discord"></i>
+                        <div>
+                            <h4>Discord</h4>
+                            <p>Artbyvelmo</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-twitter"></i>
+                        <div>
+                            <h4>Twitter</h4>
+                            <p><a href="https://x.com/Artbyvelmo" target="_blank">@Artbyvelmo</a></p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/xzzvlwwy" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <input type="hidden" name="_subject" value="New Portfolio Contact from Website">
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Velmoverse</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://x.com/Artbyvelmo" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Formspree Contact Button -->
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script>
+      /* paste this line in verbatim */
+      window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+      /* customize formbutton below*/     
+      formbutton("create", {
+        action: "https://formspree.io/f/xzzvlwwy",
+        title: "How can we help?",
+        fields: [
+          { 
+            type: "email", 
+            label: "Email:", 
+            name: "email",
+            required: true,
+            placeholder: "your@email.com"
+          },
+          {
+            type: "textarea",
+            label: "Message:",
+            name: "message",
+            placeholder: "What's on your mind?",
+          },
+          { type: "submit" }      
+        ],
+        styles: {
+          title: {
+            backgroundColor: "gray"
+          },
+          button: {
+            backgroundColor: "gray"
+          }
+        }
+      });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
