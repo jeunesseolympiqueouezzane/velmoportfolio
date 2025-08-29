@@ -249,19 +249,17 @@ function initializePortfolio() {
         div.style.animationDelay = `${index * 0.1}s`;
         
 
-        // Handle folder names with spaces and special characters (encodeURIComponent for each folder segment)
-        let folderName = projectId;
-        if (projectId === 'luna-memecoin') folderName = 'luna memecoin';
-        if (projectId === 'hypnotic-chameleons') folderName = 'hypnotic chameleons';
-        if (projectId === 'trumpio-ladio') folderName = 'trumpio ladio';
-        if (projectId === 'sugarcane-memecoin') folderName = 'sugarcane memecoin';
-        if (projectId === 'tilly-memecoin') folderName = 'tilly memecoin';
-        if (projectId === 'random-arts') folderName = 'random nfts + memecoins arts';
 
-        // Encode each folder segment for spaces and special chars
-        const encodedFolder = folderName.split(' ').map(encodeURIComponent).join('%20');
-        const encodedImage = encodeURIComponent(imageName);
-        const imagePath = `img/${encodedFolder}/${encodedImage}`;
+    // Use new folder names with dashes
+    let folderName = projectId;
+    if (projectId === 'luna-memecoin') folderName = 'luna-memecoin';
+    if (projectId === 'hypnotic-chameleons') folderName = 'hypnotic-chameleons';
+    if (projectId === 'trumpio-ladio') folderName = 'trumpio-ladio';
+    if (projectId === 'sugarcane-memecoin') folderName = 'sugarcane-memecoin';
+    if (projectId === 'tilly-memecoin') folderName = 'tilly-memecoin';
+    if (projectId === 'random-arts') folderName = 'random-nfts-memecoins-arts';
+
+    const imagePath = `img/${folderName}/${imageName}`;
 
         div.innerHTML = `
             <div class="gallery-image">
