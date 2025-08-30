@@ -30,7 +30,7 @@ html {
         position: fixed;
         top: 0;
         width: 100%;
-        background: #f8fafc;
+        background: #e3edfd;
         box-shadow: 0 4px 24px 0 rgba(36, 99, 235, 0.10);
         backdrop-filter: blur(10px);
         z-index: 1000;
@@ -40,7 +40,7 @@ html {
 
 @media (max-width: 768px) {
     .navbar {
-        background: #e5eaf3 !important;
+        background: #e3edfd !important;
     }
 }
 
