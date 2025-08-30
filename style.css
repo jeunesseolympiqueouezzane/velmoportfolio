@@ -27,10 +27,15 @@ html {
 
 /* Navigation */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
+        position: fixed;
+        top: 0;
+        width: 100%;
         background: #f8fafc;
+        box-shadow: 0 4px 24px 0 rgba(36, 99, 235, 0.10);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        transition: all 0.3s ease;
+        animation: navbarFadeIn 0.8s cubic-bezier(.4,0,.2,1);
 }
 
 @media (max-width: 768px) {
@@ -38,14 +43,6 @@ html {
         background: #e5eaf3 !important;
     }
 }
-    box-shadow: 0 4px 24px 0 rgba(36, 99, 235, 0.10);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-    .navbar {
-        animation: navbarFadeIn 0.8s cubic-bezier(.4,0,.2,1);
-    }
 
     @keyframes navbarFadeIn {
         from { opacity: 0; transform: translateY(-30px); }
