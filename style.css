@@ -30,7 +30,14 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #f8fafc;
+        background: #f8fafc;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        background: #e5eaf3 !important;
+    }
+}
     box-shadow: 0 4px 24px 0 rgba(36, 99, 235, 0.10);
     backdrop-filter: blur(10px);
     z-index: 1000;
@@ -203,8 +210,10 @@ html {
 .bar {
     width: 25px;
     height: 3px;
-    background: #ffffff;
+    background: #2563eb;
     margin: 3px 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px #3b82f633;
     transition: 0.3s;
 }
 
